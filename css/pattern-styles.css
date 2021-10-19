@@ -1,0 +1,73 @@
+/*General Settings*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    background: linear-gradient(
+        90deg,
+        #7ce2aa 0%,
+        rgb(60, 61, 163) 100%);
+    color:white;
+    padding: 10px 0;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+body{
+    background-color: #ccc;
+}
+
+/*ID's Settings*/
+
+/*Class Settings*/
+.logo img{
+    width: 100px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.text-info-header{
+    padding-left: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.input-search form{
+    display: flex;
+    width: 100%;
+}
+
+.input-search input[type=text]{
+    width: calc( 100% - 40px);
+    height: 40px;
+    width: 500px;
+    border: none;
+    margin-left: 10px;
+}
+
+.input-search button{
+    width: 40px;
+    border: 0;
+    height: 40px;
+    background-color: #7ce2aa;
+}
