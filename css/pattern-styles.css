@@ -16,12 +16,6 @@ header{
     padding: 10px 0;
 }
 
-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 a{
     text-decoration: none;
     color: white;
@@ -37,9 +31,18 @@ body{
     background-color: #ccc;
 }
 
-/*ID's Settings*/
+li{
+    list-style: none;
+}
 
-/*Class Settings*/
+/*START HEADER*/
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo img{
     width: 100px;
     padding-left: 10px;
@@ -50,6 +53,9 @@ body{
     padding-left: 30px;
     font-size: 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-search form{
@@ -71,3 +77,71 @@ body{
     height: 40px;
     background-color: #7ce2aa;
 }
+/*END HEADER*/
+
+/* START NAV BAR*/
+
+#top-bar{
+    background-color: white;
+    height: 30px;
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+    position: relative;
+}
+
+.top-bar-items-more{
+    display: none;
+}
+
+.link-top-bar{
+    color: grey;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px 15px;
+    border-right: solid 1px;
+    border-color: #ccc;
+    transition: all 400ms ease;
+}
+.link-top-bar2{
+    color: #7ce2aa;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px 10px;
+}
+
+.link-top-bar:hover,.link-top-bar2:hover{
+    color: white;
+    outline: 1px solid #7ce2aa;
+    background-color: #ccc;
+    border-radius: 2px;
+}
+
+.top-bar-items-more{
+    left: 5px;
+}
+
+.top-bar-items-more a{
+    color:pink
+}
+
+.top-bar-items:hover .top-bar-items-more{
+    display: block;
+    margin-top: 6px;
+    background-color: white;
+    outline: 1px solid grey;
+    border-radius: 2px;
+    height: 350px;
+    width: 99%;
+    position: absolute;
+}
+
+.item-more-title{
+    color: grey;
+    font-size: 15px;
+    padding: 10px 10px;
+}
+
+/*END NAV BAR*/
