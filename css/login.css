@@ -1,0 +1,50 @@
+#contents form{
+    padding-top: 20px;
+    padding-left: 38%;
+}
+
+#contents input{
+    margin-bottom: 10px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    opacity: 80%;
+    color: black;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+
+.recover-text{
+    margin-left: 135px;
+    font-size: 15px;
+}
+
+.recover-text:hover{
+    opacity: 70%;
+    color: grey;
+}
+
+input:focus{
+    box-shadow: 0 0 20px rgb(60, 61, 163);
+}
+
+.login-text{
+color: white;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color:rgb(60, 61, 163);
+padding-top: 120px;
+text-align: center;
+font-size: 40px;
+}
+
+.button-login{
+    width: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+    height: 40px;
+    background:rgb(60, 61, 163) 100%;
+}
+.button-login:hover{
+    opacity: 70%;
+}

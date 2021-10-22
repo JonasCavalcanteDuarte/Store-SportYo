@@ -7,14 +7,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header{
-    background: linear-gradient(
-        90deg,
-        #7ce2aa 0%,
-        rgb(60, 61, 163) 100%);
-    color:white;
-    padding: 10px 0;
-}
 
 a{
     text-decoration: none;
@@ -38,6 +30,13 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    background: linear-gradient(
+        90deg,
+        #7ce2aa 0%,
+        rgb(60, 61, 163) 100%);
+    color:white;
+    position: fixed;
+    height: 55px;
 }
 
 .logo img{
@@ -65,7 +64,7 @@ body{
     height: 40px;
     width: 500px;
     border: none;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .input-search button{
@@ -83,8 +82,10 @@ body{
     height: 30px;
     width: 100%;
     display: flex;
-    position: relative;
+    position: fixed;
+    margin-top: 55px;
 }
+
 
 .top-bar-items-more{
     display: none;
@@ -103,7 +104,6 @@ body{
     font-size: 12px;
     text-decoration: none;
     cursor: pointer;
-
 }
 
 .link-top-bar:hover,.link-top-bar2:hover{
@@ -184,3 +184,53 @@ body{
 }
 
 /*END NAV BAR*/
+
+/* START CONTENTS BODY*/
+
+/*END CONTENTS BODY*/
+
+/*START FOOTER*/
+
+#footer{
+    color: white;
+    height: 100px;
+    background: linear-gradient(
+        90deg,
+        rgb(60, 61, 163) 0%,
+        #7ce2aa 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+.text-footer{
+    text-align: center;
+}
+
+#footer img{
+    width: 100px;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+#footer p {
+    font-size: 12px;
+    margin-top: 50px;
+}
+
+.link-facebook-footer{
+    font-size: 50px;
+    margin-left: 10px;
+    margin-bottom: 35px;
+}
+
+.link-instagram-footer{
+    font-size: 50px;
+    margin-left: 10px;
+    margin-bottom: 35px;
+}
+
+/*END FOOTER*/
