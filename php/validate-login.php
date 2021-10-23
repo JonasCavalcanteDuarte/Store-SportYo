@@ -31,7 +31,7 @@
                 $conn = new PDO("oci:dbname=" . $dbtns . ";charset=utf8", $db_username, $db_password);
                 $test_connection = $conn->query('SELECT SYSDATE FROM DUAL');
             } catch (PDOException $e) {
-                print "Connection error! " . $e->getMessage() . "<br/>";
+                header('location:./login-error-page.php');
                 die();
             }
 
@@ -43,7 +43,7 @@
             $count = $conn->query("SELECT COUNT(*) FROM SPORTYO_USERS WHERE USERNAME = '$username' AND PASSWORD = '$password'")->fetchColumn();
             $cod_user = $stmt->fetchAll(PDO::FETCH_OBJ);
         //var_dump($cod_user);
-            print $count;
+            //print $count;
             if ($count == '1') {
                 session_start();
 
@@ -62,9 +62,8 @@
                 unset($_SESSION['password']);
                 unset($_SESSION['time']);
                 $_SESSION = array();
-                echo "Usuario não localizado!";
+                header('location:./user-not-found.php');
                 die();
-                echo '<br><a href="./login.php"><b>Voltar</b></a>';
             }
     ?>
 </body>

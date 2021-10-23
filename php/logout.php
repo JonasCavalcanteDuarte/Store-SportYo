@@ -8,6 +8,6 @@
     unset($_SESSION['cod_user']);
     unset($_SESSION['time']);
 
-    header('location: ../index.php');
+    header('location: ./login.php');
 
 ?>

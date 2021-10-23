@@ -1,5 +1,5 @@
 <?php
-include './php/verify-session.php';
+include './verify-session.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,8 +8,8 @@ include './php/verify-session.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/pattern-styles.css">
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/pattern-styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/user-not-found.css">
     <script src="https://kit.fontawesome.com/c23e963244.js" crossorigin="anonymous"></script>
     <script>
         jQuery("document").ready(function($) {
@@ -45,7 +45,7 @@ include './php/verify-session.php';
 <header>
     <div id="container">
         <div class="logo">
-            <a href="./index.php"><img src="./img/Logos/logo2.png" alt="Logo SportYo" /></a>
+            <a href="../index.php"><img src="../img/Logos/logo2.png" alt="Logo SportYo" /></a>
         </div>
         <div class="text-info-header">
             <button>
@@ -76,11 +76,11 @@ include './php/verify-session.php';
             <?php
             if (isset($_SESSION['username']) == true && isset($_SESSION['password']) == true) {
                 echo '
-                        <a href="./php/my-account.php"><p>Minha Conta</p></a>
-                        <a href="./php/logout.php"><p>Sair</p></a>';
+                        <a href="./my-account.php"><p>Minha Conta</p></a>
+                        <a href="./logout.php"><p>Sair</p></a>';
             } else {
                 echo '
-                        <a href="./php/login.php"><p>Olá, faça seu login</p></a>';
+                        <a href="./login.php"><p>Olá, faça seu login</p></a>';
             }
             ?>
         </div><!-- Text info header-->
@@ -496,14 +496,20 @@ include './php/verify-session.php';
         </div>
     </nav>
     <div id="contents">
-        <h1>Teste</h1>
+        <h1><i class="fas fa-bug"></i> Alguma coisa deu errado!</h1>
+        <h2>Lamentamos o ocorrido, por favor tente novamente mais tarde.</h2>
+        <button class="goback">
+            <p>
+                <a href="../index.php">Voltar</a>
+            </p>
+        </button>
     </div>
-        <footer id="footer">
-            <a href="index.php" class="link-logo-footer"><img src="./img/Logos/logo2.png" alt="Logo Sport Yo"></a><a href="#" class="link-facebook-footer"><i class="fab fa-facebook"></i></a><a href="#" class="link-instagram-footer"><i class="fab fa-instagram"></i></a>
-            <p class="text-footer">Os preços, promoções, condições de pagamento, frete e produtos são válidos exclusivamente
-                para compras realizadas via internet.<br>
-                Fotos meramente ilustrativas. Copyright © 2021-2021 - SportYo.com.br. Todos os direitos reservados.</p>
-        </footer>
+    <footer id="footer">
+        <a href="index.php" class="link-logo-footer"><img src="../img/Logos/logo2.png" alt="Logo Sport Yo"></a><a href="#" class="link-facebook-footer"><i class="fab fa-facebook"></i></a><a href="#" class="link-instagram-footer"><i class="fab fa-instagram"></i></a>
+        <p class="text-footer">Os preços, promoções, condições de pagamento, frete e produtos são válidos exclusivamente
+            para compras realizadas via internet.<br>
+            Fotos meramente ilustrativas. Copyright © 2021-2021 - SportYo.com.br. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 
