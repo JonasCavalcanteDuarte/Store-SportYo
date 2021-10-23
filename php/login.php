@@ -476,10 +476,10 @@
         </div>
     </nav>
     <div id="contents">
-    <h1 class="login-text">Bem vindo!</h1>
+        <h1 class="login-text">Bem vindo!</h1>
         <form name="loginUser" method="post" action="./validate-login.php">
-            <input type="text" placeholder="Digite seu login"><br>
-            <input type="password" placeholder="Digite sua senha"><br>
+            <input type="text" placeholder="Digite seu login" name="username"><br>
+            <input type="password" placeholder="Digite sua senha" name="password"><br>
             <button type="submit" class="button-login">Entrar</button><br>
             <button class="button-login"><a href="./create-account.php">Criar uma conta</a></button><br>
             <a href="./recover-password.php" class="recover-text">Esqueceu sua senha?</a>

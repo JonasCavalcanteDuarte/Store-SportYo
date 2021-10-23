@@ -1,3 +1,6 @@
+<?php
+include './php/verify-session.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/pattern-styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
     <script src="https://kit.fontawesome.com/c23e963244.js" crossorigin="anonymous"></script>
     <script>
 
@@ -61,9 +65,10 @@
             </form>
         </div>
         <div class="text-info-header">
-            <a href="./php/login.php">
+            <!--<a href="./php/login.php">
                 <p>Olá, faça seu login</p>
-            </a>
+            </a>-->
+            <?php if(isset($_SESSION['username']) == true && isset($_SESSION['password'])== true ){echo'<a href="./php/my-account.php"><p>Minha Conta</p></a><a href="./php/logout.php"><p>Sair</p></a>';} else{echo'<a href="./php/login.php"><p>Olá, faça seu login</p></a>';} ?>
         </div><!-- Text info header-->
         <div class="text-info-header">
             <a href="#">
@@ -479,7 +484,6 @@
     </nav>
     <div id="contents">
         <h1>Teste</h1>
-    </div>
     <footer id="footer">
         <a href="index.php" class="link-logo-footer"><img src="./img/Logos/logo2.png" alt="Logo Sport Yo"></a><a href="#"
             class="link-facebook-footer"><i class="fab fa-facebook"></i></a><a href="#" class="link-instagram-footer"><i

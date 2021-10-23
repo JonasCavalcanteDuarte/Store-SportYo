@@ -49,7 +49,6 @@ body{
     padding-left: 30px;
     font-size: 15px;
     cursor: pointer;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -104,6 +103,8 @@ body{
     font-size: 12px;
     text-decoration: none;
     cursor: pointer;
+    padding: 2px 15px;
+    transition: all 400ms ease;
 }
 
 .link-top-bar:hover,.link-top-bar2:hover{
