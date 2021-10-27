@@ -11,7 +11,7 @@ include './php/verify-session.php';
     <link rel="stylesheet" type="text/css" href="./css/pattern-styles.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <script src="https://kit.fontawesome.com/c23e963244.js" crossorigin="anonymous"></script>
-    <script>
+    <script defer>
         jQuery("document").ready(function($) {
 
             var nav = $('#top-bar');

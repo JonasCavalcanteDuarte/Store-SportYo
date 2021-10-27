@@ -51,7 +51,7 @@
                 $_SESSION['password'] = $password;
                 $_SESSION['cod_user'] = $cod_user[0];
                 $_SESSION['time'] = time();
-                header('location:../index.php');
+                header('location:../teste.php');
                 die();
             } else {
                 session_start();

@@ -1,0 +1,157 @@
+#contents{
+    padding-top: 85px;
+    height: 477px;
+    padding-left: 1.5%;
+    background-color: grey;
+}
+#contents h3{
+    color: white;
+    font-size: 14px;
+}
+
+#contents i {
+    color: rgb(60, 61, 163);
+}
+
+.form-column1{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: transparent;
+    width: 400px;
+    float: left;
+    padding: 10px 10px;
+}
+
+.form-column2{
+    display: inline-block;
+    margin-top: 10px;
+    height: 370px;
+    margin-left: 20px;
+    background-color: transparent;
+    border-left: 5px #7ce2aa solid;
+    border-right: 5px #7ce2aa solid;
+    width: 400px;
+    padding: 10px 20px;
+}
+.form-column3{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: transparent;
+    width: 400px;
+    float: right;
+    padding: 10px 5px;
+}
+.form-column3 a{
+    font-size: 12px;
+    color: lightgray;
+    text-decoration: underline;
+}
+
+.form-column3 a:hover{
+opacity: 50%;
+}
+
+.form-column2 a:hover{
+    opacity: 50%;
+}
+
+.form-column3 label{
+    font-size: 12px;
+}
+
+.form-column-input{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+.form-column-input input{
+    margin-top: 5px;
+    width: 170px;
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 3px;
+    padding-left: 10px;
+    height: 25px;
+}
+
+.form-column-input input:hover{
+    outline: 1.3px rgb(60, 61, 163) solid;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.form-column-input input:focus{
+    outline: 1.5px rgb(60, 61, 163) solid;
+}
+
+.form-column-input select{
+    margin-top: 5px;
+    width: 170px;
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 3px;
+    padding-left: 10px;
+    height: 25px;
+    color:grey;
+}
+
+.form-column-input-email input{
+    margin-top: 10px;
+    width: 345px;
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 3px;
+    padding-left: 10px;
+    height: 25px;
+}
+
+.form-column-input-address input{
+    margin-top: 10px;
+    width: 345px;
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 3px;
+    padding-left: 10px;
+    height: 25px;  
+}
+
+.dont-know-cep{
+    font-size: 10px;
+}
+
+.newsletter-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.newsletter-box input{
+    margin-top: 15px;
+}
+
+.use-terms{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.use-terms input{
+    margin-top: 15px;
+}
+
+.button{
+    outline: 2px lightgray solid;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 50px;
+    padding:10px 0 10px 0;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}

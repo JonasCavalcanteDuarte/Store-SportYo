@@ -11,7 +11,7 @@ include './verify-session.php';
     <link rel="stylesheet" type="text/css" href="../css/pattern-styles.css">
     <link rel="stylesheet" type="text/css" href="../css/user-not-found.css">
     <script src="https://kit.fontawesome.com/c23e963244.js" crossorigin="anonymous"></script>
-    <script>
+    <script defer>
         jQuery("document").ready(function($) {
 
             var nav = $('#top-bar');
@@ -40,7 +40,7 @@ include './verify-session.php';
 
         });
     </script>
-    <title>Sport Yo</title>
+    <title>Sport Yo - Algo deu errado</title>
 </head>
 <header>
     <div id="container">

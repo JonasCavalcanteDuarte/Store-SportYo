@@ -1,9 +1,17 @@
 
 body{
-    background-image: url("../img/Backgrounds/login-background.png");
+    background-image: url("../img/Backgrounds/login-background.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
+input,button{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 #contents form{
     padding-top: 20px;
     padding-left: 38%;
@@ -17,6 +25,7 @@ body{
     color: black;
     border-radius: 2px;
     padding-left: 10px;
+    position: relative;
 }
 
 .recover-text{
@@ -37,7 +46,7 @@ input:focus{
 color: white;
 -webkit-text-stroke-width: 1px;
 -webkit-text-stroke-color:rgb(60, 61, 163);
-padding-top: 120px;
+padding-top: 100px;
 text-align: center;
 font-size: 40px;
 }
@@ -52,4 +61,19 @@ font-size: 40px;
 }
 .button-login:hover{
     opacity: 70%;
+}
+
+input ~ span.error{
+    display: flex;
+    padding: 0;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+input ~ span.error.active{
+    font-size: 13px;
+    border: 1px solid red;
+    width: 300px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    padding: 0.4em;
 }

@@ -1,3 +1,7 @@
+<?php
+include './verify-session.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="../css/pattern-styles.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
     <script src="https://kit.fontawesome.com/c23e963244.js" crossorigin="anonymous"></script>
-    <script>
+    <script src="../js/verify-form-login.js" defer></script>
+    <script defer>
         jQuery("document").ready(function($) {
 
             var nav = $('#top-bar');
@@ -37,7 +42,7 @@
 
         });
     </script>
-    <title>Sport Yo</title>
+    <title>Sport Yo - Entrar na sua conta</title>
 </head>
 <header>
     <div id="container">
@@ -46,9 +51,19 @@
         </div>
         <div class="text-info-header">
             <button>
-                <p><span>Olá</span><br><i class="fas fa-map-marker-alt" href="#" style="font-size: 15pxx;"></i>
-                    <span style="font-size: 12px;">Selecione o endereço</span>
-                </p>
+                <?php
+                if (isset($_SESSION['username']) == true && isset($_SESSION['password']) == true) {
+                    echo '
+                            <a href="#"><p><span>Olá, ' . $_SESSION['username'] . '</span><br><i class="fas fa-map-marker-alt" href="#" style="font-size: 15pxx;"></i>
+                                <span style="font-size: 12px;">Selecione o endereço</span>
+                            </p></a>';
+                } else {
+                    echo '
+                            <a href="#"><p><span>Olá</span><br><i class="fas fa-map-marker-alt" href="#" style="font-size: 15pxx;"></i>
+                                <span style="font-size: 12px;">Selecione o endereço</span>
+                            </p></a>';
+                }
+                ?>
             </button>
         </div>
         <div class="input-search">
@@ -60,9 +75,16 @@
             </form>
         </div>
         <div class="text-info-header">
-            <a href="#">
-                <p>Olá, faça seu login</p>
-            </a>
+            <?php
+            if (isset($_SESSION['username']) == true && isset($_SESSION['password']) == true) {
+                echo '
+                        <a href="./my-account.php"><p>Minha Conta</p></a>
+                        <a href="./logout.php"><p>Sair</p></a>';
+            } else {
+                echo '
+                        <a href="#"><p>Olá, faça seu login</p></a>';
+            }
+            ?>
         </div><!-- Text info header-->
         <div class="text-info-header">
             <a href="#">
@@ -478,8 +500,14 @@
     <div id="contents">
         <h1 class="login-text">Bem vindo!</h1>
         <form name="loginUser" method="post" action="./validate-login.php">
-            <input type="text" placeholder="Digite seu login" name="username"><br>
-            <input type="password" placeholder="Digite sua senha" name="password"><br>
+            <div>
+                <input type="text" placeholder="Digite seu login" name="username" required /><br>
+                <span class="error"></span>
+            </div>
+            <div>
+                <input type="password" placeholder="Digite sua senha" name="password" required /><br>
+                <span class="error"></span>
+            </div>
             <button type="submit" class="button-login">Entrar</button><br>
             <button class="button-login"><a href="./create-account.php">Criar uma conta</a></button><br>
             <a href="./recover-password.php" class="recover-text">Esqueceu sua senha?</a>
