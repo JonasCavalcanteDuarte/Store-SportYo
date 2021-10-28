@@ -92,7 +92,7 @@ include './verify-session.php';
                         <a href="./logout.php"><p>Sair</p></a>';
             } else {
                 echo '
-                        <a href="#"><p>Olá, faça seu login</p></a>';
+                        <a href="./login.php"><p>Olá, faça seu login</p></a>';
             }
             ?>
         </div><!-- Text info header-->
@@ -508,11 +508,11 @@ include './verify-session.php';
         </div>
     </nav>
     <div id="contents">
-        <form action="register-account.php" method="post">
+        <form action="register-account.php" method="POST">
             <div class="form-column1">
                 <h3><i class="fas fa-users"></i> Dados Pessoais</h3>
                 <div class="form-column-input">
-                    <input type="text" name="fisrt-name" placeholder="Primeiro nome" required />
+                    <input type="text" name="first-name" placeholder="Primeiro nome" required />
                     <input type="text" name="last-name" placeholder="Segundo nome" required />
                     <input type="text" name="cpf" placeholder="CPF" class="cpf" required /><br>
                     <input type="text" name="birth-date" placeholder="Data de Nascimento" class="birth-date" required />
@@ -558,7 +558,7 @@ include './verify-session.php';
                 </div>
                 <div class="use-terms">
                 <h3 style="font-size: 12px;"><i class="fas fa-user-lock"></i> Termos de uso e dados</h3>
-                <input type="checkbox" name="licence-agreement" id="licence" />
+                <input type="checkbox" name="licence-agreement" id="licence" required/>
                 <label for="licence">Li e concordo com o <a href="#">termo de concentimento</a> e aceito os <a href="#">termos e condições</a> *</label>
                 </div>
 

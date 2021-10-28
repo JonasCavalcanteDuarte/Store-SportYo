@@ -1,7 +1,6 @@
 <?php
 include './verify-session.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,9 +9,8 @@ include './verify-session.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/pattern-styles.css">
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/user_already_exists.css">
     <script src="https://kit.fontawesome.com/c23e963244.js" crossorigin="anonymous"></script>
-    <script src="../js/verify-form-login.js" defer></script>
     <script defer>
         jQuery("document").ready(function($) {
 
@@ -42,7 +40,7 @@ include './verify-session.php';
 
         });
     </script>
-    <title>Sport Yo - Entrar na sua conta</title>
+    <title>Sport Yo - Usuário já cadastrado</title>
 </head>
 <header>
     <div id="container">
@@ -82,7 +80,7 @@ include './verify-session.php';
                         <a href="./logout.php"><p>Sair</p></a>';
             } else {
                 echo '
-                        <a href="#"><p>Olá, faça seu login</p></a>';
+                        <a href="./login.php"><p>Olá, faça seu login</p></a>';
             }
             ?>
         </div><!-- Text info header-->
@@ -498,20 +496,18 @@ include './verify-session.php';
         </div>
     </nav>
     <div id="contents">
-        <h1 class="login-text">Bem vindo!</h1>
-        <form name="loginUser" method="post" action="./validate-login.php">
-            <div>
-                <input type="email" placeholder="Digite seu e-mail" name="email" required /><br>
-                <span class="error"></span>
-            </div>
-            <div>
-                <input type="password" placeholder="Digite sua senha" name="password" required /><br>
-                <span class="error"></span>
-            </div>
-            <button type="submit" class="button-login">Entrar</button><br>
-        </form>
-        <button class="button-login2"><a href="./create-account.php">Criar uma conta</a></button><br>
-            <a href="./recover-password.php" class="recover-text">Esqueceu sua senha?</a>
+        <h1><i class="fas fa-times"></i> Já existe um usuário cadastrado com este email.</h1>
+        <h2>Por favor, verifique se digitou corretamente.</h2>
+        <button class="goback">
+            <p>
+                <a href="./login.php">Voltar</a>
+            </p>
+        </button>
+        <button class="goback">
+            <p>Caso precise recuperar sua senha 
+                <a href="./recover-password.php">clique aqui.</a>
+            </p>
+        </button>
     </div>
     <footer id="footer">
         <a href="index.php" class="link-logo-footer"><img src="../img/Logos/logo2.png" alt="Logo Sport Yo"></a><a href="#" class="link-facebook-footer"><i class="fab fa-facebook"></i></a><a href="#" class="link-instagram-footer"><i class="fab fa-instagram"></i></a>

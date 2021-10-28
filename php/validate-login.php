@@ -12,7 +12,7 @@
     <?php
 
         //Taking the username and password values ​​of the user trying to login through the page login.php
-            $username = $_POST['username'];
+            $email = $_POST['email'];
             $password = md5($_POST['password']);
 
 
@@ -31,27 +31,24 @@
                 $conn = new PDO("oci:dbname=" . $dbtns . ";charset=utf8", $db_username, $db_password);
                 $test_connection = $conn->query('SELECT SYSDATE FROM DUAL');
             } catch (PDOException $e) {
-                header('location:./login-error-page.php');
+                header('location:./connection-error-page.php');
                 die();
             }
 
 
         //Querying the database, looking for the values ​​filled in by the user upon login
-            $query = "SELECT COD_USER FROM SPORTYO_USERS WHERE USERNAME = '$username' AND PASSWORD = '$password'";
-        //echo $query;
-            $stmt = $conn->query($query);
-            $count = $conn->query("SELECT COUNT(*) FROM SPORTYO_USERS WHERE USERNAME = '$username' AND PASSWORD = '$password'")->fetchColumn();
-            $cod_user = $stmt->fetchAll(PDO::FETCH_OBJ);
-        //var_dump($cod_user);
-            //print $count;
+            $query = "SELECT USERNAME FROM SPORTYO_USERS WHERE EMAIL = '$email' AND PASSWORD = '$password'";
+            $count = $conn->query("SELECT COUNT(*) FROM SPORTYO_USERS WHERE EMAIL = '$email' AND PASSWORD = '$password'")->fetchColumn();
+            $username = $conn->query($query)->fetchColumn();
+        //var_dump($username);
+        //echo $username;
+            
             if ($count == '1') {
                 session_start();
-
                 $_SESSION['username'] = $username;
                 $_SESSION['password'] = $password;
-                $_SESSION['cod_user'] = $cod_user[0];
                 $_SESSION['time'] = time();
-                header('location:../teste.php');
+                header('location:../index.php');
                 die();
             } else {
                 session_start();

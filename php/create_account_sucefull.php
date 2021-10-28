@@ -9,7 +9,7 @@ include './verify-session.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/pattern-styles.css">
-    <link rel="stylesheet" type="text/css" href="../css/user-not-found.css">
+    <link rel="stylesheet" type="text/css" href="../css/create_account_sucefull.css">
     <script src="https://kit.fontawesome.com/c23e963244.js" crossorigin="anonymous"></script>
     <script defer>
         jQuery("document").ready(function($) {
@@ -40,7 +40,7 @@ include './verify-session.php';
 
         });
     </script>
-    <title>Sport Yo - Algo deu errado</title>
+    <title>Sport Yo - Cadastro realizado com sucesso</title>
 </head>
 <header>
     <div id="container">
@@ -496,11 +496,10 @@ include './verify-session.php';
         </div>
     </nav>
     <div id="contents">
-        <h1><i class="fas fa-bug"></i> Alguma coisa deu errado!</h1>
-        <h2>Lamentamos o ocorrido, por favor tente novamente mais tarde.</h2>
+        <h1><i class="fas fa-times"></i> Cadastro realizado com sucesso!</h1>
         <button class="goback">
             <p>
-                <a href="../index.php">Voltar</a>
+                <a href="./login.php">Ir para o Login</a>
             </p>
         </button>
     </div>
